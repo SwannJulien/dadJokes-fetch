@@ -3,14 +3,14 @@ const punchline = document.querySelector(".punchline");
 const button = document.querySelector(".button");
 
 // API endpoint and connexion options
-const url = config.url;
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": config.key,
-    "X-RapidAPI-Host": config.host,
-  },
-};
+// const url = config.url;
+// const options = {
+//   method: "GET",
+//   headers: {
+//     "X-RapidAPI-Key": config.key,
+//     "X-RapidAPI-Host": config.host,
+//   },
+// };
 
 // Triggered the function getData() when pushing the button
 button.addEventListener("click", getData);

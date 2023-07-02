@@ -1,2 +1,4 @@
 config.js
-functions/
+node_modules
+token-hider.js
+functions

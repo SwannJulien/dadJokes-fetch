@@ -17,7 +17,7 @@ button.addEventListener("click", getData);
 
 // Fetch data from the API and send them to the function renderData()
 async function getData() {
-  const response = await fetch("/.netlify/functions/");
+  const response = await fetch("/.netlify/functions/token-hider.js");
   const result = await response.json();
   const data = await result.body[0];
   renderData(data);

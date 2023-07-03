@@ -2,22 +2,22 @@ const setup = document.querySelector(".setup");
 const punchline = document.querySelector(".punchline");
 const button = document.querySelector(".button");
 
-// API endpoint and connexion options
-const url = config.url;
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": config.key,
-    "X-RapidAPI-Host": config.host,
-  },
-};
+// // API endpoint and connexion options
+// const url = config.url;
+// const options = {
+//   method: "GET",
+//   headers: {
+//     "X-RapidAPI-Key": config.key,
+//     "X-RapidAPI-Host": config.host,
+//   },
+// };
 
 // Triggered the function getData() when pushing the button
 button.addEventListener("click", getData);
 
 // Fetch data from the API and send them to the function renderData()
 async function getData() {
-  const response = await fetch(url, options);
+  const response = await fetch(`/.netlify/functions/fetch-dadjokes`);
   const result = await response.json();
   const data = await result.body[0];
   renderData(data);

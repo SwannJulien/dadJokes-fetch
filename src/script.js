@@ -8,8 +8,11 @@ button.addEventListener("click", getData);
 // Fetch data from the API and send them to the function renderData()
 async function getData() {
   const response = await fetch(`/.netlify/functions/fetch-dadjokes`);
+  console.log(response);
   const result = await response.json();
+  console.log(result);
   const data = await result.body[0];
+  console.log(data);
   renderData(data);
 }
 

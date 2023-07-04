@@ -1,11 +1,13 @@
 const axios = require("axios");
+const { API_URL } = process.env;
+const { API_KEY } = process.env;
 
 const handler = async () => {
   const options = {
     method: "GET",
-    url: process.env.API_URL,
+    url: API_URL,
     headers: {
-      "X-RapidAPI-Key": process.env.API_KEY,
+      "X-RapidAPI-Key": API_KEY,
       "X-RapidAPI-Host": "dad-jokes.p.rapidapi.com",
     },
   };

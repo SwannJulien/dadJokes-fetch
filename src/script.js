@@ -36,7 +36,6 @@ function renderData(data) {
   setTimeout(getButtonBack, 12000);
 
   function getButtonBack() {
-    button.classList.add("active");
     punchline.classList.toggle("inactive");
     punchline.classList.remove("active");
     button.classList.toggle("inactive");
